@@ -1,0 +1,26 @@
+#cloud-config
+autoinstall
+  version 1
+
+  locale es_ES.UTF-8
+  keyboard
+    layout es
+    variant 
+
+  timezone EuropeMadrid
+
+  identity
+    hostname ubuntu
+    username usuario
+    password $6$HASH_DE_LA_CONTRASEÑA
+
+  storage
+    layout
+      name direct
+
+  packages []
+
+  ssh
+    install-server false
+
+  shutdown poweroff
